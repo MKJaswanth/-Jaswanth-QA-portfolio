@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaswanth M | QA Portfolio</title>
+  <meta name="description" content="QA portfolio for Jaswanth M, showcasing manual testing, Playwright automation, defect reporting, regression strategy, and real test case work.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to work</a>
+
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Jaswanth M home">
+      <span class="brand-mark">JM</span>
+      <span>Quality Systems</span>
+    </a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#method">Method</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Manual QA + Playwright automation</p>
+        <h1>Quality assurance that turns uncertainty into release confidence.</h1>
+        <p class="hero-text">
+          I am Jaswanth M, a QA Automation Engineer who designs test coverage, reports defects with reproducible evidence, and builds Playwright frameworks that help teams ship cleaner web products.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">Review proof of work</a>
+          <a class="button ghost" href="mailto:jaswanth.mk63@gmail.com">Start a QA conversation</a>
+        </div>
+      </div>
+      <aside class="audit-panel" aria-label="Portfolio testing snapshot">
+        <div class="panel-top">
+          <span>QA Control Room</span>
+          <span class="live-dot">ready</span>
+        </div>
+        <div class="signal signal-a">
+          <span>272</span>
+          <p>manual test cases reviewed across real work samples</p>
+        </div>
+        <div class="signal-row">
+          <div class="signal small">
+            <span>30</span>
+            <p>defects documented</p>
+          </div>
+          <div class="signal small pass">
+            <span>112</span>
+            <p>passing checks</p>
+          </div>
+        </div>
+        <div class="trace">
+          <span style="--w: 82%"></span>
+          <span style="--w: 54%"></span>
+          <span style="--w: 74%"></span>
+          <span style="--w: 39%"></span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="intro-band" aria-label="Positioning">
+      <p>
+        Clients do not hire testing for spreadsheets. They hire it to protect revenue, reputation, and users. My work connects test design to business risk: authentication, carts, form validation, dashboards, Kanban workflows, responsive layouts, uploads, and release readiness.
+      </p>
+    </section>
+
+    <section id="work" class="section work-section">
+      <div class="section-heading">
+        <p class="eyebrow">Proof of work</p>
+        <h2>Manual test cases, redesigned as client evidence.</h2>
+        <p>
+          These samples come from the provided QA spreadsheets and are presented as a decision trail: what was checked, what risk it covered, what was expected, and what the product actually did.
+        </p>
+      </div>
+
+      <div class="project-strip" aria-label="Project coverage">
+        <article>
+          <strong>C2C Agricorp</strong>
+          <span>22 cases + 19 defects</span>
+        </article>
+        <article>
+          <strong>C2C Wholesale</strong>
+          <span>13 E2E commerce checks</span>
+        </article>
+        <article>
+          <strong>Scrum Dev</strong>
+          <span>95 Kanban workflow cases</span>
+        </article>
+        <article>
+          <strong>Validation Suite</strong>
+          <span>142 cases + defect ledger</span>
+        </article>
+      </div>
+
+      <div class="case-toolbar" aria-label="Case filters">
+        <button class="filter active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="Pass">Pass</button>
+        <button class="filter" type="button" data-filter="Fail">Fail</button>
+        <button class="filter" type="button" data-filter="Open">Open defects</button>
+      </div>
+
+      <div class="case-lab" id="caseLab">
+        <article class="case-card" data-status="Fail">
+          <div class="case-id">TC_004 | C2C Agricorp</div>
+          <h3>Cart access without authentication</h3>
+          <p class="module">Homepage / access control</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Unauthenticated users should be redirected to login or receive a clear prompt.</dd></div>
+            <div><dt>Actual</dt><dd>Cart page loaded openly with an empty cart state.</dd></div>
+          </dl>
+          <span class="status fail">Fail</span>
+        </article>
+
+        <article class="case-card" data-status="Open">
+          <div class="case-id">BUG_002 | C2C Agricorp</div>
+          <h3>Cart page accessible without user login</h3>
+          <p class="module">Business risk: wholesale buyer access</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Login gate before cart access.</dd></div>
+            <div><dt>Actual</dt><dd>Cart page was reachable without an active session.</dd></div>
+          </dl>
+          <span class="status open">Open defect</span>
+        </article>
+
+        <article class="case-card" data-status="Open">
+          <div class="case-id">BUG_004 | C2C Agricorp</div>
+          <h3>CTA redirects to the wrong page</h3>
+          <p class="module">Homepage banner slider</p>
+          <dl>
+            <div><dt>Expected</dt><dd>"Wholesale Solution" should route to the Wholesale Solutions page.</dd></div>
+            <div><dt>Actual</dt><dd>The button sent users to About Us, breaking the conversion path.</dd></div>
+          </dl>
+          <span class="status open">Open defect</span>
+        </article>
+
+        <article class="case-card" data-status="Fail">
+          <div class="case-id">TC_002 | C2C Wholesale</div>
+          <h3>Category tile navigation mismatch</h3>
+          <p class="module">Browse by Category</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Each category tile should open the matching category URL and page title.</dd></div>
+            <div><dt>Actual</dt><dd>Category behavior remained tied to the general All Categories state.</dd></div>
+          </dl>
+          <span class="status fail">Fail</span>
+        </article>
+
+        <article class="case-card" data-status="Pass">
+          <div class="case-id">TC_004 | Scrum Dev</div>
+          <h3>Kanban board loads with seven workflow columns</h3>
+          <p class="module">Project board / task visibility</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Defined, Hold, In Progress, Ready for QA, QA, Completed, and Cancelled columns are visible.</dd></div>
+            <div><dt>Actual</dt><dd>All seven columns and filter controls were visible and correctly labelled.</dd></div>
+          </dl>
+          <span class="status pass">Pass</span>
+        </article>
+
+        <article class="case-card" data-status="Open">
+          <div class="case-id">BUG_007 | Validation Suite</div>
+          <h3>XSS payload executes in search field</h3>
+          <p class="module">Search and filter security</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Input should be escaped with no script execution.</dd></div>
+            <div><dt>Actual</dt><dd>Alert dialog appeared, confirming an XSS vulnerability.</dd></div>
+          </dl>
+          <span class="status open">Open defect</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="method" class="section method-section">
+      <div class="section-heading compact">
+        <p class="eyebrow">Methodology</p>
+        <h2>A testing practice built around risk, reproducibility, and maintainability.</h2>
+      </div>
+      <div class="method-map">
+        <article>
+          <span>01</span>
+          <h3>Requirement decomposition</h3>
+          <p>Convert flows into clear scenarios with preconditions, test data, expected behavior, priority, and severity.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Manual and exploratory execution</h3>
+          <p>Run functional, regression, UI, negative, boundary, responsive, and edge-case checks across web products.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Defect evidence</h3>
+          <p>Document exact reproduction steps, environment details, expected versus actual results, and client-facing impact.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Automation that earns its keep</h3>
+          <p>Use Playwright, Python, pytest, Page Object Model, fixtures, parametrization, dotenv config, HTML reports, and GitHub Actions CI.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="impact" class="section impact-section">
+      <div class="impact-copy">
+        <p class="eyebrow">Impact signals</p>
+        <h2>Quality work that protects user journeys.</h2>
+        <p>
+          The portfolio evidence shows attention to defects that matter to clients: broken purchase paths, missing validation, incorrect redirects, security-sensitive input handling, session behavior, file upload rules, and mobile layout stability.
+        </p>
+      </div>
+      <div class="impact-board" aria-label="QA impact metrics">
+        <div class="metric"><span>4</span><p>real QA workbooks analyzed</p></div>
+        <div class="metric"><span>272</span><p>test cases structured</p></div>
+        <div class="metric"><span>30</span><p>defects recorded with reproduction paths</p></div>
+        <div class="metric"><span>21</span><p>Playwright automation cases described in profile</p></div>
+      </div>
+    </section>
+
+    <section class="section expertise-section" aria-label="Expertise">
+      <div class="expertise-title">
+        <p class="eyebrow">Coverage stack</p>
+        <h2>Where I help teams.</h2>
+      </div>
+      <div class="stack-grid">
+        <span>Manual Testing</span>
+        <span>Regression Testing</span>
+        <span>Functional Testing</span>
+        <span>Bug Triage</span>
+        <span>Form Validation</span>
+        <span>Security Edge Cases</span>
+        <span>Responsive QA</span>
+        <span>Playwright</span>
+        <span>Python</span>
+        <span>pytest</span>
+        <span>Page Object Model</span>
+        <span>GitHub Actions</span>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div>
+        <p class="eyebrow">Ready for the next build</p>
+        <h2>Bring me in before quality becomes expensive.</h2>
+        <p>
+          Available for QA Engineer, SDET, manual testing, Playwright automation, regression coverage, and defect documentation work.
+        </p>
+      </div>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:jaswanth.mk63@gmail.com">Email Jaswanth</a>
+        <a class="button ghost" href="https://www.linkedin.com/in/mkjaswanth">LinkedIn profile</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Jaswanth M</span>
+    <span>QA Automation Engineer | Coimbatore, India</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
