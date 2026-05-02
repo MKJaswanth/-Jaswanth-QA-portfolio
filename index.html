@@ -9,6 +9,7 @@
 </head>
 <body>
   <a class="skip-link" href="#work">Skip to work</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
   <header class="site-header" aria-label="Primary navigation">
     <a class="brand" href="#top" aria-label="Jaswanth M home">
@@ -30,75 +31,86 @@
         <span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
       <div class="hero-copy">
-        <p class="eyebrow">Manual QA + Playwright automation</p>
-        <h1>Quality assurance that turns uncertainty into release confidence.</h1>
+        <p class="availability"><span></span>Available for contract, freelance, and full-time QA work</p>
+        <p class="eyebrow">Remote-ready | IST timezone | Open to global clients</p>
+        <h1>I find the bugs that break your launch before your users do.</h1>
         <p class="hero-text">
-          I am Jaswanth M, a QA Automation Engineer who designs test coverage, reports defects with reproducible evidence, and builds Playwright frameworks that help teams ship cleaner web products.
+          I am Jaswanth M, a QA Automation Engineer who turns product risk into clear test coverage, reproducible defect reports, and Playwright automation that teams can maintain after the sprint ends.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#work">Review proof of work</a>
-          <a class="button ghost" href="mailto:jaswanth.mk63@gmail.com">Start a QA conversation</a>
+          <a class="button primary" href="mailto:jaswanth.mk63@gmail.com">Start a QA conversation</a>
+          <a class="button ghost" href="#work">Review proof of work</a>
+        </div>
+        <div class="social-row" aria-label="Profile links">
+          <a href="https://www.linkedin.com/in/mkjaswanth"><span>in</span>LinkedIn</a>
+          <a href="https://github.com/MKJaswanth"><span>gh</span>GitHub</a>
+          <a href="https://github.com/MKJaswanth/E-commerce_automation"><span>pw</span>Playwright repo</a>
         </div>
       </div>
-      <aside class="audit-panel" aria-label="Portfolio testing snapshot">
-        <div class="panel-top">
-          <span>QA Control Room</span>
-          <span class="live-dot">ready</span>
+      <aside class="proof-panel" aria-label="Client value snapshot">
+        <div class="headshot-card">
+          <div class="headshot" aria-label="Headshot placeholder">
+            <span>JM</span>
+          </div>
+          <div>
+            <strong>Jaswanth M</strong>
+            <p>QA Automation Engineer</p>
+            <small>Replace this slot with a professional headshot before publishing.</small>
+          </div>
         </div>
-        <div class="signal signal-a">
-          <span>272</span>
-          <p>manual test cases reviewed across real work samples</p>
+        <div class="hero-stat">
+          <span>2</span>
+          <p>security-sensitive defects highlighted: auth bypass and XSS execution.</p>
         </div>
-        <div class="signal-row">
-          <div class="signal small">
+        <div class="stat-grid">
+          <div>
             <span>30</span>
-            <p>defects documented</p>
+            <p>defects with reproduction paths</p>
           </div>
-          <div class="signal small pass">
-            <span>112</span>
-            <p>passing checks</p>
+          <div>
+            <span>21</span>
+            <p>Playwright automation cases</p>
           </div>
         </div>
-        <div class="trace">
-          <span style="--w: 82%"></span>
-          <span style="--w: 54%"></span>
-          <span style="--w: 74%"></span>
-          <span style="--w: 39%"></span>
-        </div>
+        <p class="response-note">When you email, I will reply within 24 hours with availability, project-fit questions, and a suggested QA plan.</p>
       </aside>
     </section>
 
     <section class="intro-band" aria-label="Positioning">
       <p>
-        Clients do not hire testing for spreadsheets. They hire it to protect revenue, reputation, and users. My work connects test design to business risk: authentication, carts, form validation, dashboards, Kanban workflows, responsive layouts, uploads, and release readiness.
+        Clients do not hire testing for spreadsheets. They hire it to protect revenue, reputation, and users. My work connects test design to business risk: authentication bypass, XSS, broken purchase paths, weak validation, mobile overflow, and release readiness.
       </p>
     </section>
 
     <section id="work" class="section work-section">
       <div class="section-heading">
         <p class="eyebrow">Proof of work</p>
-        <h2>Manual test cases, redesigned as client evidence.</h2>
+        <h2>Case studies built from real QA artifacts.</h2>
         <p>
-          These samples come from the provided QA spreadsheets and are presented as a decision trail: what was checked, what risk it covered, what was expected, and what the product actually did.
+          Each project below is framed as a client story: product risk, testing approach, and the defect evidence that would help a team make safer release decisions.
         </p>
       </div>
 
-      <div class="project-strip" aria-label="Project coverage">
+      <div class="story-grid" aria-label="Project case study narratives">
         <article>
           <strong>C2C Agricorp</strong>
-          <span>22 cases + 19 defects</span>
+          <p>A wholesale/agri platform where buyer trust depends on clear navigation and protected commerce flows. Testing exposed cart access without login, broken product links, non-clickable contact actions, and CTA routing mistakes.</p>
+          <span>Outcome: 22 cases, 19 defects, conversion and access-control risks surfaced.</span>
         </article>
         <article>
           <strong>C2C Wholesale</strong>
-          <span>13 E2E commerce checks</span>
+          <p>An e-commerce marketplace with category, hero, requirement-posting, and registration flows. QA focused on the buyer journey from landing page to lead capture and account creation.</p>
+          <span>Outcome: 13 E2E checks with navigation and validation issues documented.</span>
         </article>
         <article>
           <strong>Scrum Dev</strong>
-          <span>95 Kanban workflow cases</span>
+          <p>A Scrum/Kanban productivity app where teams rely on dashboard accuracy, task creation, and board state visibility. Testing covered login, widgets, board columns, filters, and task workflows.</p>
+          <span>Outcome: 95 workflow cases, including header/navigation and task-flow defects.</span>
         </article>
         <article>
           <strong>Validation Suite</strong>
-          <span>142 cases + defect ledger</span>
+          <p>A reusable validation and defect ledger covering auth, registration, uploads, security, responsive behavior, and session handling. The suite is designed to catch boundary failures before users do.</p>
+          <span>Outcome: 142 cases and 11 high-priority defect examples.</span>
         </article>
       </div>
 
@@ -112,7 +124,7 @@
       <div class="case-lab" id="caseLab">
         <article class="case-card" data-status="Fail">
           <div class="case-id">TC_004 | C2C Agricorp</div>
-          <h3>Cart access without authentication</h3>
+          <h3><strong>Broken auth gate:</strong> cart access without authentication</h3>
           <p class="module">Homepage / access control</p>
           <dl>
             <div><dt>Expected</dt><dd>Unauthenticated users should be redirected to login or receive a clear prompt.</dd></div>
@@ -167,7 +179,7 @@
 
         <article class="case-card" data-status="Open">
           <div class="case-id">BUG_007 | Validation Suite</div>
-          <h3>XSS payload executes in search field</h3>
+          <h3><strong>Critical input risk:</strong> XSS payload executes in search field</h3>
           <p class="module">Search and filter security</p>
           <dl>
             <div><dt>Expected</dt><dd>Input should be escaped with no script execution.</dd></div>
@@ -216,10 +228,34 @@
         </p>
       </div>
       <div class="impact-board" aria-label="QA impact metrics">
-        <div class="metric"><span>4</span><p>real QA workbooks analyzed</p></div>
-        <div class="metric"><span>272</span><p>test cases structured</p></div>
-        <div class="metric"><span>30</span><p>defects recorded with reproduction paths</p></div>
-        <div class="metric"><span>21</span><p>Playwright automation cases described in profile</p></div>
+        <div class="metric"><span>2</span><p>critical security patterns found: auth bypass and XSS execution</p></div>
+        <div class="metric"><span>30</span><p>defects recorded with reproducible steps and expected results</p></div>
+        <div class="metric"><span>4</span><p>product areas covered: commerce, forms, dashboards, and workflow boards</p></div>
+        <div class="metric"><span>21</span><p>Playwright automation cases across auth, cart, inventory, and checkout</p></div>
+      </div>
+    </section>
+
+    <section class="section credibility-section" aria-label="Credibility">
+      <div class="section-heading compact">
+        <p class="eyebrow">Human proof</p>
+        <h2>Credibility clients can verify.</h2>
+      </div>
+      <div class="cred-grid">
+        <article>
+          <span>Current role</span>
+          <h3>Junior Software Tester at Crystal Code Labs</h3>
+          <p>Manual testing, defect reporting, regression checks, and Playwright automation for web and app products.</p>
+        </article>
+        <article>
+          <span>Project proof</span>
+          <h3>QA Engineer project work for Isaii AI</h3>
+          <p>Manual, regression, and edge-case testing for an AI product, including heuristics for non-deterministic model behavior.</p>
+        </article>
+        <article>
+          <span>References</span>
+          <h3>Testimonials can be added here</h3>
+          <p>No quote has been fabricated. Add a real manager, colleague, or client testimonial before publishing for stronger trust.</p>
+        </article>
       </div>
     </section>
 
@@ -256,6 +292,7 @@
         <a class="button primary" href="mailto:jaswanth.mk63@gmail.com">Email Jaswanth</a>
         <a class="button ghost" href="https://www.linkedin.com/in/mkjaswanth">LinkedIn profile</a>
       </div>
+      <p class="contact-note">Expected next step: I will respond within 24 hours with a short availability check, clarifying questions, and a practical QA starting point.</p>
     </section>
   </main>
 

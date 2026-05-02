@@ -1,5 +1,6 @@
 const filters = document.querySelectorAll(".filter");
 const cards = document.querySelectorAll(".case-card");
+const progress = document.querySelector(".scroll-progress span");
 
 filters.forEach((button) => {
   button.addEventListener("click", () => {
@@ -14,3 +15,12 @@ filters.forEach((button) => {
     });
   });
 });
+
+const updateProgress = () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const ratio = max > 0 ? window.scrollY / max : 0;
+  progress.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
+};
+
+updateProgress();
+window.addEventListener("scroll", updateProgress, { passive: true });
