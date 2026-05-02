@@ -1,6 +1,7 @@
 const filters = document.querySelectorAll(".filter");
 const cards = document.querySelectorAll(".case-card");
 const progress = document.querySelector(".scroll-progress span");
+const revealItems = document.querySelectorAll(".section-heading, .case-card, .method-map article, .experience-timeline article, .metric, .cred-grid article");
 
 filters.forEach((button) => {
   button.addEventListener("click", () => {
@@ -24,3 +25,16 @@ const updateProgress = () => {
 
 updateProgress();
 window.addEventListener("scroll", updateProgress, { passive: true });
+
+revealItems.forEach((item) => item.classList.add("reveal"));
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+revealItems.forEach((item) => revealObserver.observe(item));
