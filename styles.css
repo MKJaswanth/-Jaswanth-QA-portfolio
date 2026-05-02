@@ -100,10 +100,16 @@ nav {
   place-items: center;
   width: 38px;
   height: 38px;
-  color: white;
   background: var(--charcoal);
   border: 2px solid var(--ink);
   box-shadow: 5px 5px 0 var(--amber);
+  overflow: hidden;
+}
+
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 nav {
