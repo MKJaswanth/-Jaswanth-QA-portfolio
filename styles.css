@@ -586,6 +586,51 @@ dd {
   line-height: 1.48;
 }
 
+.experience-section {
+  background: var(--paper);
+}
+
+.experience-timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.experience-timeline article {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 18px;
+  padding: 22px;
+  background: var(--panel);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0 rgba(8, 124, 118, .22);
+}
+
+.experience-marker {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  color: white;
+  background: var(--teal);
+  font-weight: 900;
+}
+
+.role-meta {
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.experience-timeline ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .impact-section {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
@@ -769,5 +814,9 @@ footer {
 
   .button {
     width: 100%;
+  }
+
+  .experience-timeline article {
+    grid-template-columns: 1fr;
   }
 }
