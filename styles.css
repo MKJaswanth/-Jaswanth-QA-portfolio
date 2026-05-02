@@ -100,16 +100,28 @@ nav {
   place-items: center;
   width: 38px;
   height: 38px;
-  background: var(--charcoal);
+  background: var(--teal);
   border: 2px solid var(--ink);
   box-shadow: 5px 5px 0 var(--amber);
-  overflow: hidden;
+  position: relative;
 }
 
-.brand-mark img {
-  display: block;
-  width: 100%;
-  height: 100%;
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: 6px 9px 5px;
+  background: var(--charcoal);
+  clip-path: polygon(50% 0, 100% 18%, 100% 56%, 50% 100%, 0 56%, 0 18%);
+}
+
+.brand-check {
+  position: relative;
+  width: 17px;
+  height: 9px;
+  border-left: 4px solid var(--panel);
+  border-bottom: 4px solid var(--panel);
+  transform: rotate(-45deg) translate(1px, -1px);
+  z-index: 1;
 }
 
 nav {
