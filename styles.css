@@ -343,6 +343,32 @@ nav a:hover {
   overflow: hidden;
 }
 
+.page-hero {
+  padding: clamp(54px, 8vw, 112px) clamp(18px, 5vw, 64px) clamp(28px, 5vw, 56px);
+  background:
+    linear-gradient(90deg, rgba(17, 20, 22, .045) 1px, transparent 1px),
+    linear-gradient(rgba(17, 20, 22, .04) 1px, transparent 1px),
+    var(--paper);
+  background-size: 44px 44px;
+}
+
+.page-hero h1 {
+  max-width: 980px;
+}
+
+.page-hero > p:not(.eyebrow) {
+  max-width: 780px;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.5;
+}
+
+[data-theme="dark"] .page-hero {
+  background:
+    radial-gradient(circle at 16% 8%, rgba(53, 185, 173, .14), transparent 30%),
+    linear-gradient(180deg, #0b0f11 0%, var(--paper) 80%);
+}
+
 .hero-grid {
   position: absolute;
   inset: 36px clamp(18px, 5vw, 64px);
@@ -866,6 +892,59 @@ nav a:focus-visible,
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   margin-bottom: 34px;
+}
+
+.proof-gateway {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.proof-gateway a {
+  min-height: 250px;
+  padding: 22px;
+  background: var(--panel);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.proof-gateway a:hover {
+  transform: translateY(-6px);
+  border-color: var(--teal);
+  box-shadow: 0 22px 48px rgba(8, 124, 118, .18);
+}
+
+.proof-gateway span {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.proof-gateway h3 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+.proof-gateway p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.home-page .story-grid,
+.home-page .case-toolbar,
+.home-page .case-lab,
+.home-page .security-showcase,
+.home-page .deep-dive,
+.home-page .method-section,
+.home-page .automation-proof-section,
+.home-page .thinking-section,
+.home-page .roadmap-section {
+  display: none;
 }
 
 .story-grid article {
@@ -1740,6 +1819,7 @@ footer {
   .deep-dive-grid,
   .thinking-grid,
   .cred-grid,
+  .proof-gateway,
   .automation-proof-grid,
   .roadmap-grid,
   .method-map {
@@ -1949,6 +2029,7 @@ footer {
   .deep-dive-grid,
   .thinking-grid,
   .cred-grid,
+  .proof-gateway,
   .case-lab,
   .automation-proof-grid,
   .repo-proof-board,
@@ -1959,11 +2040,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .intro-band,
-  .story-grid,
-  .deep-dive,
-  .thinking-section,
-  .roadmap-section {
+  .home-page .intro-band,
+  .home-page .story-grid,
+  .home-page .deep-dive,
+  .home-page .thinking-section,
+  .home-page .roadmap-section {
     display: none;
   }
 

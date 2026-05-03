@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png?v=3">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#work">Skip to work</a>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
@@ -44,13 +44,13 @@
       </button>
     </div>
     <nav id="primaryNav" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#method">Method</a>
-      <a href="#experience">Experience</a>
-      <a href="#impact">Impact</a>
+      <a href="index.html#work">Home</a>
+      <a href="case-studies.html">Case studies</a>
+      <a href="automation.html">Automation</a>
+      <a href="index.html#experience">Experience</a>
       <a href="https://github.com/MKJaswanth/E-commerce_automation">GitHub</a>
       <a href="assets/Jaswanth-M-QA-Resume.pdf" download>Resume PDF</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
@@ -69,8 +69,8 @@
         </p>
         <div class="hero-actions">
           <a class="button primary" href="mailto:jaswanth.mk63@gmail.com">Start a QA conversation</a>
-          <a class="button ghost" href="#work">Review proof of work</a>
-          <a class="button ghost automation-cta" href="https://github.com/MKJaswanth/E-commerce_automation">Inspect Playwright framework</a>
+          <a class="button ghost" href="case-studies.html">Review proof of work</a>
+          <a class="button ghost automation-cta" href="automation.html">Inspect Playwright framework</a>
           <a class="button ghost" href="assets/Jaswanth-M-QA-Resume.pdf" download>Download resume PDF</a>
         </div>
         <div class="social-row" aria-label="Profile links">
@@ -125,11 +125,29 @@
 
     <section id="work" class="section work-section">
       <div class="section-heading">
-        <p class="eyebrow">Proof of work</p>
-        <h2>Case studies built from real QA artifacts.</h2>
+        <p class="eyebrow">Portfolio paths</p>
+        <h2>Choose the proof you want to inspect.</h2>
         <p>
-          Each project below is framed as a client story: product risk, testing approach, and the defect evidence that would help a team make safer release decisions.
+          The homepage stays short. Deeper defect evidence and automation architecture now live on focused pages for hiring managers who want to inspect the details.
         </p>
+      </div>
+
+      <div class="proof-gateway" aria-label="Portfolio proof paths">
+        <a href="case-studies.html">
+          <span>Manual QA evidence</span>
+          <h3>Case studies and defect reports</h3>
+          <p>Review access-control, CTA routing, unsafe input, navigation, and workflow validation examples.</p>
+        </a>
+        <a href="automation.html">
+          <span>Engineering proof</span>
+          <h3>Playwright automation framework</h3>
+          <p>Inspect the public repo structure, Page Object Model, pytest checks, CI flow, and report path.</p>
+        </a>
+        <a href="#experience">
+          <span>Professional signal</span>
+          <h3>Current QA experience</h3>
+          <p>See current India and Canada QA roles, responsibilities, and client-safe work descriptions.</p>
+        </a>
       </div>
 
       <div class="story-grid" aria-label="Project case study narratives">
@@ -438,7 +456,7 @@
           <span>QA operating model</span>
           <h3>Coverage that moves from risk to evidence.</h3>
           <p>I help teams understand what can break, test the highest-risk paths first, document what failed, and automate the checks worth repeating.</p>
-          <a href="#work">See defect evidence</a>
+          <a href="case-studies.html">See defect evidence</a>
         </aside>
 
         <div class="skill-lanes">

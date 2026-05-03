@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QA Case Studies | Jaswanth M</title>
+  <meta name="description" content="Manual QA case studies and defect evidence from Jaswanth M, including access control, unsafe input handling, CTA routing, and workflow validation examples.">
+  <link rel="shortcut icon" href="./favicon.ico?v=3">
+  <link rel="icon" href="./favicon.ico?v=3" sizes="any">
+  <link rel="icon" type="image/png" href="./favicon-32.png?v=3" sizes="32x32">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png?v=3">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to case studies</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="brand" href="index.html#top" aria-label="Jaswanth M home">
+      <span class="brand-mark" aria-hidden="true"><span class="brand-check"></span></span>
+      <span>Quality Systems</span>
+    </a>
+    <div class="header-controls">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="toggle-track" aria-hidden="true"><span class="toggle-thumb"><span class="sun-icon"></span><span class="moon-icon"></span></span></span>
+      </button>
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="primaryNav" aria-label="Primary">
+      <a href="index.html#work">Home</a>
+      <a href="case-studies.html">Case studies</a>
+      <a href="automation.html">Automation</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="https://github.com/MKJaswanth/E-commerce_automation">GitHub</a>
+      <a href="assets/Jaswanth-M-QA-Resume.pdf" download>Resume PDF</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="page-hero">
+      <p class="eyebrow">Manual QA proof</p>
+      <h1>Case studies built from real QA artifacts.</h1>
+      <p>Each example is framed around product risk, testing approach, and defect evidence that helps teams make safer release decisions.</p>
+    </section>
+
+    <section id="work" class="section work-section">
+      <div class="story-grid" aria-label="Project case study narratives">
+        <article>
+          <strong>B2B Commerce Platform</strong>
+          <p>A wholesale marketplace where buyer trust depends on clear navigation and protected commerce flows. Testing exposed cart access without login, broken product paths, non-clickable contact actions, and CTA routing mistakes.</p>
+          <span>Outcome: 22 cases, 19 defects, conversion and access-control risks surfaced.</span>
+        </article>
+        <article>
+          <strong>Wholesale Marketplace</strong>
+          <p>An e-commerce marketplace with category, hero, requirement-posting, and registration flows. QA focused on the buyer journey from landing page to lead capture and account creation.</p>
+          <span>Outcome: 13 E2E checks with navigation and validation issues documented.</span>
+        </article>
+        <article>
+          <strong>Workflow Management App</strong>
+          <p>A Scrum/Kanban productivity app where teams rely on dashboard accuracy, task creation, and board state visibility. Testing covered login, widgets, board columns, filters, and task workflows.</p>
+          <span>Outcome: 95 workflow cases, including header/navigation and task-flow defects.</span>
+        </article>
+        <article>
+          <strong>Validation Suite</strong>
+          <p>A reusable validation and defect ledger covering auth, registration, uploads, security, responsive behavior, and session handling. The suite is designed to catch boundary failures before users do.</p>
+          <span>Outcome: 142 cases and 11 high-priority defect examples.</span>
+        </article>
+      </div>
+
+      <div class="case-toolbar" aria-label="Case filters">
+        <button class="filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Pass" aria-pressed="false">Pass</button>
+        <button class="filter" type="button" data-filter="Fail" aria-pressed="false">Fail</button>
+        <button class="filter" type="button" data-filter="Open" aria-pressed="false">Open defects</button>
+      </div>
+
+      <div class="case-lab" id="caseLab">
+        <article class="case-card" data-status="Fail">
+          <div class="case-id">Commerce flow | Access control</div>
+          <h3><strong>Broken auth gate:</strong> cart access without authentication</h3>
+          <p class="module">Homepage / access control</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Unauthenticated users should be redirected to login or receive a clear prompt.</dd></div>
+            <div><dt>Actual</dt><dd>Unauthenticated users could reach a wholesale buyer cart flow, exposing a session-isolation gap that could affect every buyer journey.</dd></div>
+          </dl>
+          <span class="status fail">Fail</span>
+        </article>
+
+        <article class="case-card" data-status="Open">
+          <div class="case-id">Commerce defect | Buyer journey</div>
+          <h3>Cart page accessible without user login</h3>
+          <p class="module">Business risk: wholesale buyer access</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Login gate before cart access.</dd></div>
+            <div><dt>Actual</dt><dd>Cart access was possible without an active session, turning a navigation issue into a business trust and authorization risk.</dd></div>
+          </dl>
+          <span class="status open">Open defect</span>
+        </article>
+
+        <article class="case-card" data-status="Open">
+          <div class="case-id">Conversion defect | CTA routing</div>
+          <h3>CTA redirects to the wrong page</h3>
+          <p class="module">Homepage banner slider</p>
+          <dl>
+            <div><dt>Expected</dt><dd>"Wholesale Solution" should route to the Wholesale Solutions page.</dd></div>
+            <div><dt>Actual</dt><dd>The CTA sent users to About Us, breaking a high-intent conversion path and weakening lead capture.</dd></div>
+          </dl>
+          <span class="status open">Open defect</span>
+        </article>
+
+        <article class="case-card" data-status="Fail">
+          <div class="case-id">Marketplace flow | Category navigation</div>
+          <h3>Category tile navigation mismatch</h3>
+          <p class="module">Browse by Category</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Each category tile should open the matching category URL and page title.</dd></div>
+            <div><dt>Actual</dt><dd>Category behavior remained tied to the general All Categories state.</dd></div>
+          </dl>
+          <span class="status fail">Fail</span>
+        </article>
+
+        <article class="case-card" data-status="Pass">
+          <div class="case-id">Workflow app | Kanban board</div>
+          <h3>Kanban board loads with seven workflow columns</h3>
+          <p class="module">Project board / task visibility</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Defined, Hold, In Progress, Ready for QA, QA, Completed, and Cancelled columns are visible.</dd></div>
+            <div><dt>Actual</dt><dd>All seven columns and filter controls were visible and correctly labelled.</dd></div>
+          </dl>
+          <span class="status pass">Pass</span>
+        </article>
+
+        <article class="case-card" data-status="Open">
+          <div class="case-id">Security check | Input handling</div>
+          <h3><strong>Critical input risk:</strong> unsafe script input was not blocked</h3>
+          <p class="module">Search and filter security</p>
+          <dl>
+            <div><dt>Expected</dt><dd>Input should be escaped with no script execution.</dd></div>
+            <div><dt>Actual</dt><dd>Unsafe script input was accepted, indicating an OWASP A03:2021 Injection-class risk that needed sanitization and output encoding.</dd></div>
+          </dl>
+          <span class="status open">Open defect</span>
+        </article>
+      </div>
+
+      <section class="security-showcase" aria-label="Security defect showcase">
+        <div>
+          <p class="eyebrow">Security signal</p>
+          <h2>Unsafe input handling deserved escalation.</h2>
+          <p>During negative testing on search and filter behavior, I validated that script-like input was not being safely handled. I treated it as an OWASP A03:2021 Injection risk, documented the expected sanitization behavior, and recommended server-side validation plus output encoding.</p>
+        </div>
+        <div class="defect-anatomy" aria-label="Featured defect report anatomy">
+          <div><span>Risk</span><p>Script-like input was accepted in a user-facing field.</p></div>
+          <div><span>Expected</span><p>Input should be escaped, sanitized, and rendered as harmless text.</p></div>
+          <div><span>Impact</span><p>Injection-class behavior can damage trust, data safety, and release confidence.</p></div>
+          <div><span>Recommendation</span><p>Validate server-side, encode output, and add regression coverage for unsafe payloads.</p></div>
+        </div>
+      </section>
+
+      <details class="deep-dive">
+        <summary>B2B Commerce Platform deep dive</summary>
+        <div class="deep-dive-grid">
+          <article><span>Scope</span><p>Covered homepage, navigation, contact actions, cart access, product paths, CTAs, and buyer journey flows for a wholesale commerce experience.</p></article>
+          <article><span>Approach</span><p>Prioritized release-risk scenarios first: access control, conversion paths, broken links, form validation, and expected-versus-actual behavior.</p></article>
+          <article><span>What I Found</span><p>Cart access without login, incorrect CTA routing, product path failures, and static contact elements that should have opened phone or email actions.</p></article>
+          <article><span>Business Impact</span><p>Clear defect evidence helped separate cosmetic issues from risks that affect buyer trust, lead conversion, and release readiness.</p></article>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <span>Jaswanth M</span>
+    <span>QA Automation Engineer | Coimbatore, India</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
