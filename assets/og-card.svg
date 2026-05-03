@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#111416"/>
+  <rect x="72" y="72" width="1056" height="486" rx="34" fill="#FFFDF7"/>
+  <rect x="112" y="112" width="136" height="136" rx="30" fill="#087C76"/>
+  <path d="M180 136L232 157V205C232 241 211 271 180 284C149 271 128 241 128 205V157L180 136Z" fill="#111416"/>
+  <path d="M158 205L176 223L211 181" stroke="#FFFDF7" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="112" y="346" fill="#111416" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="900">Jaswanth M</text>
+  <text x="112" y="432" fill="#087C76" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">QA Engineer | Playwright | Manual Testing</text>
+  <text x="112" y="498" fill="#59636B" font-family="Inter, Arial, sans-serif" font-size="31">I find the bugs that break your launch before your users do.</text>
+  <text x="760" y="166" fill="#3658B8" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">30+</text>
+  <text x="760" y="214" fill="#59636B" font-family="Inter, Arial, sans-serif" font-size="28">defects documented</text>
+  <text x="760" y="326" fill="#3658B8" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="900">21</text>
+  <text x="760" y="374" fill="#59636B" font-family="Inter, Arial, sans-serif" font-size="28">automation checks</text>
+</svg>

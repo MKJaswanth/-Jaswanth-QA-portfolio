@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jaswanth M | QA Portfolio</title>
-  <meta name="description" content="QA portfolio for Jaswanth M, showcasing manual testing, Playwright automation, defect reporting, regression strategy, and real test case work.">
+  <title>Jaswanth M | QA Automation Engineer Portfolio | Playwright, Manual Testing India</title>
+  <meta name="description" content="Jaswanth M is a QA Automation Engineer in India with Playwright, Python, pytest, manual testing, defect reporting, and current India + Canada QA experience.">
+  <meta name="keywords" content="QA Automation Engineer, Playwright, Manual Testing, Software Tester India, Python pytest, QA portfolio, SDET">
+  <meta property="og:title" content="Jaswanth M | QA Automation Engineer">
+  <meta property="og:description" content="Manual QA, Playwright automation, defect evidence, regression coverage, and current India + Canada QA experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mkjaswanth.github.io/-Jaswanth-QA-portfolio/assets/og-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="shortcut icon" href="./favicon.ico?v=3">
   <link rel="icon" href="./favicon.ico?v=3" sizes="any">
   <link rel="icon" type="image/png" href="./favicon-32.png?v=3" sizes="32x32">
@@ -28,8 +34,13 @@
       <a href="#experience">Experience</a>
       <a href="#impact">Impact</a>
       <a href="https://github.com/MKJaswanth/E-commerce_automation">GitHub</a>
+      <a href="assets/Jaswanth-M-QA-Resume.pdf" download>Resume PDF</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <span class="sun-icon" aria-hidden="true"></span>
+      <span class="moon-icon" aria-hidden="true"></span>
+    </button>
   </header>
 
   <main id="top">
@@ -48,11 +59,13 @@
         <div class="hero-actions">
           <a class="button primary" href="mailto:jaswanth.mk63@gmail.com">Start a QA conversation</a>
           <a class="button ghost" href="#work">Review proof of work</a>
+          <a class="button ghost" href="assets/Jaswanth-M-QA-Resume.pdf" download>Download resume PDF</a>
         </div>
         <div class="social-row" aria-label="Profile links">
-          <a href="https://www.linkedin.com/in/mkjaswanth"><span>in</span>LinkedIn</a>
-          <a href="https://github.com/MKJaswanth"><span>gh</span>GitHub</a>
-          <a href="https://github.com/MKJaswanth/E-commerce_automation"><span>pw</span>Playwright repo</a>
+          <a class="social-link linkedin" href="https://www.linkedin.com/in/mkjaswanth" aria-label="LinkedIn profile"><span aria-hidden="true">in</span>LinkedIn</a>
+          <a class="social-link github" href="https://github.com/MKJaswanth" aria-label="GitHub profile"><span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2.2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.36-1.18-3.36-1.18-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.88 1.52 2.32 1.08 2.88.83.09-.64.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.57 9.57 0 0 1 12 7.25c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.67-4.57 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2.2Z"/></svg></span>GitHub</a>
+          <a class="social-link playwright" href="https://github.com/MKJaswanth/E-commerce_automation" aria-label="Playwright automation repository"><span aria-hidden="true">PW</span>Playwright repo</a>
+          <a class="social-link ci" href="https://github.com/MKJaswanth/E-commerce_automation/actions" aria-label="GitHub Actions CI runs"><span aria-hidden="true">CI</span>CI runs</a>
         </div>
       </div>
       <aside class="proof-panel" aria-label="Client value snapshot">
@@ -124,10 +137,10 @@
       </div>
 
       <div class="case-toolbar" aria-label="Case filters">
-        <button class="filter active" type="button" data-filter="all">All</button>
-        <button class="filter" type="button" data-filter="Pass">Pass</button>
-        <button class="filter" type="button" data-filter="Fail">Fail</button>
-        <button class="filter" type="button" data-filter="Open">Open defects</button>
+        <button class="filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Pass" aria-pressed="false">Pass</button>
+        <button class="filter" type="button" data-filter="Fail" aria-pressed="false">Fail</button>
+        <button class="filter" type="button" data-filter="Open" aria-pressed="false">Open defects</button>
       </div>
 
       <div class="case-lab" id="caseLab">
@@ -197,6 +210,28 @@
           <span class="status open">Open defect</span>
         </article>
       </div>
+
+      <details class="deep-dive">
+        <summary>B2B Commerce Platform deep dive</summary>
+        <div class="deep-dive-grid">
+          <article>
+            <span>Scope</span>
+            <p>Covered homepage, navigation, contact actions, cart access, product paths, CTAs, and buyer journey flows for a wholesale commerce experience.</p>
+          </article>
+          <article>
+            <span>Approach</span>
+            <p>Prioritized release-risk scenarios first: access control, conversion paths, broken links, form validation, and expected-versus-actual behavior.</p>
+          </article>
+          <article>
+            <span>What I Found</span>
+            <p>Cart access without login, incorrect CTA routing, product path failures, and static contact elements that should have opened phone or email actions.</p>
+          </article>
+          <article>
+            <span>Business Impact</span>
+            <p>Clear defect evidence helped separate cosmetic issues from risks that affect buyer trust, lead conversion, and release readiness.</p>
+          </article>
+        </div>
+      </details>
     </section>
 
     <section id="method" class="section method-section">
@@ -325,6 +360,30 @@
       </div>
     </section>
 
+    <section class="section thinking-section" aria-label="QA thinking">
+      <div class="section-heading compact">
+        <p class="eyebrow">QA thinking</p>
+        <h2>Short notes that show how I think about quality.</h2>
+      </div>
+      <div class="thinking-grid">
+        <article>
+          <span>Prioritization</span>
+          <h3>How I decide what to test first</h3>
+          <p>Start with user-blocking flows, money paths, access-control risk, then expand into edge cases and lower-impact UI polish.</p>
+        </article>
+        <article>
+          <span>Defect Quality</span>
+          <h3>What makes a bug report useful</h3>
+          <p>Good reports reduce developer guesswork: environment, steps, expected result, actual result, impact, and retest notes.</p>
+        </article>
+        <article>
+          <span>Automation</span>
+          <h3>When I automate a manual case</h3>
+          <p>I automate stable, repeatable, high-value regression paths where the cost of missing a bug is higher than the maintenance cost.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="contact" class="contact-section">
       <div>
         <p class="eyebrow">Ready for the next build</p>
@@ -336,8 +395,33 @@
       <div class="contact-actions">
         <a class="button primary" href="mailto:jaswanth.mk63@gmail.com">Email Jaswanth</a>
         <a class="button ghost" href="https://www.linkedin.com/in/mkjaswanth">LinkedIn profile</a>
+        <a class="button ghost" href="assets/Jaswanth-M-QA-Resume.pdf" download>Download resume PDF</a>
       </div>
       <p class="contact-note">Expected next step: I will respond within 24 hours with a short availability check, clarifying questions, and a practical QA starting point.</p>
+      <form class="contact-form" id="contactForm">
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          What do you need?
+          <select name="need">
+            <option>QA project support</option>
+            <option>Full-time role discussion</option>
+            <option>Playwright automation</option>
+            <option>Manual testing / regression</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="button primary" type="submit">Open email draft</button>
+      </form>
     </section>
   </main>
 
