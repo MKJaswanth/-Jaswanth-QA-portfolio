@@ -1904,6 +1904,9 @@ footer {
     width: 76px;
     height: 76px;
     border-radius: 18px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
     box-shadow: 0 0 0 4px rgba(8, 124, 118, .18);
   }
 
@@ -1915,13 +1918,17 @@ footer {
   }
 
   .initials-avatar span {
-    font-size: 28px;
+    font-size: 26px;
+    line-height: .9;
   }
 
   .initials-avatar small {
+    max-width: 58px;
     margin-top: 5px;
     padding: 0;
-    font-size: 8px;
+    font-size: 7px;
+    line-height: 1.05;
+    text-align: center;
   }
 
   .headshot-card strong {
