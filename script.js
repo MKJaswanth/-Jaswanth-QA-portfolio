@@ -3,6 +3,8 @@ const cards = document.querySelectorAll(".case-card");
 const progress = document.querySelector(".scroll-progress span");
 const revealItems = document.querySelectorAll(".section-heading, .case-card, .security-showcase, .method-map article, .automation-proof-grid article, .experience-timeline article, .metric, .cred-grid article, .roadmap-grid article");
 const themeToggle = document.querySelector(".theme-toggle");
+const navToggle = document.querySelector(".nav-toggle");
+const primaryNav = document.querySelector("#primaryNav");
 const contactForm = document.querySelector("#contactForm");
 
 const savedTheme = localStorage.getItem("portfolio-theme");
@@ -39,6 +41,26 @@ themeToggle?.addEventListener("click", () => {
   document.documentElement.dataset.theme = nextTheme === "dark" ? "dark" : "";
   localStorage.setItem("portfolio-theme", nextTheme);
   syncThemeToggle();
+});
+
+const closeMobileNav = () => {
+  document.body.classList.remove("nav-open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  navToggle?.setAttribute("aria-label", "Open navigation menu");
+};
+
+navToggle?.addEventListener("click", () => {
+  const isOpen = document.body.classList.toggle("nav-open");
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+});
+
+primaryNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMobileNav);
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMobileNav();
 });
 
 contactForm?.addEventListener("submit", (event) => {
