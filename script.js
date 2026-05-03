@@ -1,7 +1,7 @@
 const filters = document.querySelectorAll(".filter");
 const cards = document.querySelectorAll(".case-card");
 const progress = document.querySelector(".scroll-progress span");
-const revealItems = document.querySelectorAll(".section-heading, .case-card, .method-map article, .experience-timeline article, .metric, .cred-grid article");
+const revealItems = document.querySelectorAll(".section-heading, .case-card, .security-showcase, .method-map article, .automation-proof-grid article, .experience-timeline article, .metric, .cred-grid article, .roadmap-grid article");
 const themeToggle = document.querySelector(".theme-toggle");
 const contactForm = document.querySelector("#contactForm");
 
@@ -24,9 +24,7 @@ filters.forEach((button) => {
     const filter = button.dataset.filter;
 
     filters.forEach((item) => item.classList.remove("active"));
-    filters.forEach((item) => item.setAttribute("aria-pressed", "false"));
     button.classList.add("active");
-    button.setAttribute("aria-pressed", "true");
     filters.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
 
     cards.forEach((card) => {
@@ -54,6 +52,7 @@ contactForm?.addEventListener("submit", (event) => {
 });
 
 const updateProgress = () => {
+  if (!progress) return;
   const max = document.documentElement.scrollHeight - window.innerHeight;
   const ratio = max > 0 ? window.scrollY / max : 0;
   progress.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
