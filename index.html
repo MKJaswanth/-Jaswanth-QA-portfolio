@@ -81,37 +81,39 @@
         </div>
       </div>
       <aside class="proof-panel" aria-label="Client value snapshot">
-        <div class="panel-kicker">
-          <span></span>
-          Available for QA work
-        </div>
         <div class="headshot-card">
           <div class="initials-avatar" aria-label="Jaswanth M initials avatar">
             <span>JM</span>
-            <small>QA</small>
+            <small>Quality Analyst</small>
           </div>
           <div>
+            <div class="panel-kicker">
+              <span></span>
+              Available for QA work
+            </div>
             <strong>Jaswanth M</strong>
             <p>Jr. Software Tester + QA Engineer</p>
             <small>Currently employed, remote-ready, and delivering QA work across India and Canada.</small>
           </div>
         </div>
-        <div class="panel-divider" aria-hidden="true"></div>
         <div class="hero-stat-row">
           <div class="hero-stat">
             <span>2</span>
-            <p>active QA roles</p>
+            <p>QA roles</p>
           </div>
           <div class="hero-stat">
             <span>30</span>
-            <p>documented defects</p>
+            <p>defects logged</p>
           </div>
           <div class="hero-stat">
             <span>21</span>
-            <p>public Playwright tests</p>
+            <p>public tests</p>
           </div>
         </div>
-        <p class="response-note"><strong>Next step:</strong> I reply within 24 hours with availability, project-fit questions, and a practical QA starting point.</p>
+        <div class="panel-footer">
+          <span>Response promise</span>
+          <p>I reply within 24 hours with availability, clarifying questions, and a practical QA starting point.</p>
+        </div>
       </aside>
     </section>
 
@@ -236,11 +238,11 @@
             During negative testing on search and filter behavior, I validated that script-like input was not being safely handled. I treated it as an OWASP A03:2021 Injection risk, documented the expected sanitization behavior, and recommended server-side validation plus output encoding so user input could not execute or alter the page.
           </p>
         </div>
-        <div class="security-facts" aria-label="Security testing evidence">
-          <span>OWASP A03</span>
-          <span>Negative testing</span>
-          <span>Input sanitization</span>
-          <span>Output encoding</span>
+        <div class="defect-anatomy" aria-label="Featured defect report anatomy">
+          <div><span>Risk</span><p>Script-like input was accepted in a user-facing field.</p></div>
+          <div><span>Expected</span><p>Input should be escaped, sanitized, and rendered as harmless text.</p></div>
+          <div><span>Impact</span><p>Injection-class behavior can damage trust, data safety, and release confidence.</p></div>
+          <div><span>Recommendation</span><p>Validate server-side, encode output, and add regression coverage for unsafe payloads.</p></div>
         </div>
       </section>
 
@@ -325,6 +327,22 @@
           <h3>Reports and screenshots</h3>
           <p>pytest-html report generation and failure screenshot support are documented in the repo.</p>
         </article>
+      </div>
+      <div class="repo-proof-board" aria-label="Automation repository proof">
+        <div class="repo-tree">
+          <div class="repo-topline"><span></span> Framework structure</div>
+          <code>pages/base_page.py</code>
+          <code>pages/login_page.py</code>
+          <code>pages/inventory_page.py</code>
+          <code>tests/conftest.py</code>
+          <code>tests/test_checkout.py</code>
+          <code>.github/workflows/playwright.yml</code>
+        </div>
+        <div class="report-card">
+          <span>CI proof path</span>
+          <h3>Commit -> GitHub Actions -> pytest run -> HTML report</h3>
+          <p>The repo is organized so reviewers can inspect test coverage, page objects, fixtures, workflow config, and report generation without guessing how the suite works.</p>
+        </div>
       </div>
       <div class="automation-actions">
         <a class="button primary" href="https://github.com/MKJaswanth/E-commerce_automation">Open automation repo</a>
